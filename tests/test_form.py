@@ -1,5 +1,5 @@
-import pytest
 from pathlib import Path
+
 from pages.registration_page import registration_page
 
 file_path = Path(__file__).parent.parent / 'resources' / 'images.jpeg'
@@ -26,14 +26,14 @@ def test_register_student():
     )
 
     registration_page.should_have_registered(
-        ('Student Name',  'Иван Петров'),
+        ('Student Name', 'Иван Петров'),
         ('Student Email', 'ivanov@example.com'),
-        ('Gender',        'Male'),
-        ('Mobile',        '1234567890'),
+        ('Gender', 'Male'),
+        ('Mobile', '1234567890'),
         ('Date of Birth', '10 February,1995'),
-        ('Subjects',      'Maths'),
-        ('Hobbies',       'Sports'),
-        ('Picture',       'images.jpeg'),
-        ('Address',       'Москва, ул.Гоголя 10'),
-        ('State and City','NCR Delhi'),
+        ('Subjects', 'Maths'),
+        ('Hobbies', 'Sports'),
+        ('Picture', 'images.jpeg'),
+        ('Address', 'Москва, ул.Гоголя 10'),
+        ('State and City', 'NCR Delhi'),
     )
